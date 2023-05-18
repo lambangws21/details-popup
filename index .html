@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smoth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,7 +29,7 @@
         display: none;
       }
       .popup {
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -54,7 +54,7 @@
       </h1>
     </header>
     <h1 class="text-4xl animate-pulse align-middle font-bold mb-8">Tabel Diagnosa Keperawatan</h1>
-    <table class="border border-gray-200 bg-sky-100 focus:bg-lime-200 w-full shadow-md">
+    <table class="border border-gray-200 bg-sky-100 focus:bg-lime-200 w-full shadow-md table-fixed md:table-fixed">
       <thead>
         <tr>
           <th class="border border-gry-200 bg-sky-100 p-1 w-1/5 shadow-md md:w-auto md:text-sm md:leading-10">Diagnosa Keperawatan</th>
@@ -122,9 +122,7 @@
               Salin
             </button>
           </td>
-          <td class="border border-gray-300 py-2 px-4">
-            Terapi paparan panas <br />
-            Lakukan dengan:<br />
+          <td class="border border-gray-300 py-2 px-4">Terapi paparan panas <br />Lakukan dengan:<br />
             <ul class="list-inside list-decimal">
               <li>Monitor suhu alat terapi</li>
               <li>Bungkus alat terapi menggunakan kain</li>
@@ -292,6 +290,69 @@
          <li> Kurang terpapar informasi</li>
         </ul>
       </p>
+      <!-- table -->
+            <table>
+              <caption class="caption-top text-sm font-sm  mt-2 ">Gelaja dan Tanda Mayor</caption>
+                <thead>
+                  <tr class="">
+                    <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
+                      Subjektif
+                    </th>
+                    <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
+                      Objektif
+                    </th>
+                  </tr>
+                  <td class="text-sm font-semibold mt-2 border bg-gray-100">
+                    <ul class="list-decimal list-inside">
+                      <li>Merasa kebingung</li>
+                      <li>Merasa Khawatir dengan akibat dari kondisi yang dihadapi</li>
+                      <li>Sulit berkonsentrasi</li>
+                    </ul>
+                  </td>
+                  <td class="text-sm font-semibold mt-2 border bg-gray-100">
+                    <ul class="list-decimal list-inside leading-normal ml-3">
+                    <li>Tampak gelisah</li>
+                     <li>Tampak tegang</li>
+                     <li>Sulit tidur</li>
+                    </ul>
+                  </td>
+                 </thead>
+              </table>
+              <table class="table-fixed">
+               <caption class="text-sm font-sm caption-top mt-2 ">Gelaja dan Tanda Minor</caption>
+                <thead class="md:table-fixed scroll-auto">
+                  <tr class="">
+                    <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
+                      Subjektif
+                    </th>
+                    <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
+                      Objektif
+                    </th>
+                  </tr>
+                  <td class="text-sm font-semibold mt-2 border bg-gray-100">
+                    <ul class="list-decimal list-inside">
+                      <li> Frekuensi nafas meningkat</li>
+                      <li> Frekuensi nadi meningkat</li>
+                      <li> Tekanan darah meningkat</li>
+                      <li> Diaforesis</li>
+                      <li> Tremor</li>
+                      <li> Muka tampak pucat</li>
+                      <li> Sura bergetar</li>
+                      <li> Kontak mata buruk</li>
+                      <li> Sering Berkemih</li>
+                    </ul>
+                 </td>
+                  <td class="text-sm font-semibold mt-2 border bg-gray-100">
+                    <ul class="list-decimal list-inside leading-normal ml-3">
+                    <li> Mengeluh Pusing</li>
+                    <li> Anoreksia</li>
+                    <li> Palpitasi</li>
+                    <li> Merasa tidak berdaya </li>
+                    </ul>
+                  </td>
+                </thead>
+              </table>
+              <!-- endtable -->
       <p class="mt-2 font-semibold">Kondisi terkait
         <ul class="list-decimal list-inside leading-4 text-sm">
           <li>Penyakit Addison</li>
@@ -322,7 +383,7 @@
         </p>
         <p class="font-semibold">
           Faktor Risiko:
-          <ul class="list-decimal list-inside text-sm leading-tight">
+          <ul class="list-decimal list-inside text-sm leading-normal">
             <li>  Prosedur pembedahan </li> 
             <li>  Kombinasi anastesu regional atau umum</li> 
             <li>  Skor American Society of Anestesiologist (ASA) >1  </li>
@@ -333,21 +394,8 @@
             <li>  Suhu lingkungan rendah</li> 
             <li>  Transfer panas (mis. Volume tinggi infus yang tidak dihangatkan, irigasi >2 liter yang tidak dihangatkan)</li> 
           </ul>
-          <ul class="list-decimal list-inside text-sm leading-tight">
-            <li>Krisis situasional</li>
-            <li>Kebutuhan tidak terpenuhi</li>
-           <li> Krisis maturasional</li>
-            <li>Ancaman terhadap konsep diri</li>
-           <li> Ancaman terhadap kematian</li>
-            <li>Kekhawatiran mengalami kegagalan </li>
-           <li> Disfungsi sistim keluarga</li>
-           <li> Hubuungan orang tua-anak tidak memuaskan</li>
-           <li> Faktor keturunan (tempramen mudah teragitasi sejak lahir)</li>
-           <li> Penyalahgunaan Zat</li>
-           <li> Terpapar bahaya lingkunga (mis. toksin, polutan, dan lain-lain)</li>
-           <li> Kurang terpapar informasi</li>
-          </ul>
         </p>
+         
         <p class="mt-2 font-semibold">Kondisi terkait
           <ul class="list-decimal list-inside leading-4 text-sm">
             <li>Tindakan pembedahan</li>
@@ -418,7 +466,7 @@
 
          <!-- Detail Nyeri Akut -->
           <div class="overlay"></div>
-         <div class="popup" id="nyeri-akut">
+         <div class="popup " id="nyeri-akut">
            <h2 class="text-xl font-semibold mb-3"> Nyeri Akut (D.0077) b/d Agen pencedera fisik </h2>
            <p class="leading-tight">
              <Span class="font-bold"> Nyeri Akut (D.0077) </Span> <br />
@@ -437,8 +485,7 @@
             </p>
             <!-- table -->
             <table>
-             
-                <h1 class="text-sm font-bold  mt-2 ">Gelaja dan Tanda Mayor</h1>
+             <caption class="caption-top text-sm font-sm  mt-2 ">Gelaja dan Tanda Mayor</caption>
                 <thead>
                   <tr class="">
                     <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
@@ -458,14 +505,11 @@
                     <li> Sulit tidur</li>
                     </ul>
                   </td>
-                 <hr class="">
-                </thead>
+                 </thead>
               </table>
-                <hr class="mb-4">
-              <table>
-               <hr class="mb-4">
-                <h1 class="text-sm font-bold  mt-2 ">Gelaja dan Tanda Minor</h1>
-                <thead>
+              <table class="table-fixed">
+               <caption class="text-sm font-sm caption-top mt-2 ">Gelaja dan Tanda Minor</caption>
+                <thead class="md:table-fixed">
                   <tr class="">
                     <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
                       Subjektif
@@ -487,8 +531,7 @@
                   </td>
                 </thead>
               </table>
-              <hr class="mb-2">
-            <!-- endtable -->
+             <!-- endtable -->
             <p class="mt-2 font-semibold">Kondisi terkait </p>
              <p class="list-decimal list-inside leading-4 text-sm">
                <ul class="list-decimal list-inside text-sm leading-tight">
