@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -64,10 +64,10 @@
       </thead>
       <tbody>
         <tr>
-          <td class="border border-gray-300 p-2">
-            Risiko Hipotermia Perioperatif (D.0141) b/d Kombinasi anastesi regional dan umum
+          <td class="border border-gray-300 p-2 leading-normal">
+           Ansietas (D. 0080) b/d Kekhawatiiran mengalami kegagalan
             <button
-              onclick="copyToClipboard('Risiko Hipotermia Perioperatif (D.0141) b/d Kombinasi anastesi regional dan umum');"
+              onclick="copyToClipboard('Ansietas (D. 0080) b/d Kekhawatiiran mengalami kegagalan');"
               class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"
             >
               Salin
@@ -146,6 +146,8 @@
             >
               Salin
             </button>
+            <button onclick="showPopupRisikoPerdarahan('Risiko Perdarahan (D.0012) b/d Tindakan Pembedahan');" class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"> Detail </button>
+          </td>
           </td>
           <td class="border border-gray-300 py-2 px-4"> Pasien menunjukkan (L.02017 - Tingkat Pendarahan) <br />
             yaiut:
@@ -158,7 +160,7 @@
             >
               Salin
             </button>
-          </td>
+          
           <td class="border border-gray-300 py-2 px-4">
             Pencegahan Perdarahan Lakukan dengan:<br />
             <ul class="list-inside list-decimal">
@@ -183,6 +185,7 @@
             >
               Salin
             </button>
+            <button onclick="showPopupNyeriAkut('Nyeri Akut (D.0077) b/d Agen pencedera fisik (Prosedur Operasi)');" class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"> Detail </button>
           </td>
           <td class="border border-gray-300 py-2 px-4"> Pasien menunjukkan penurunan (L.08066 - Tingkat Nyeri) <br />yaitu:
             <ul class="list-inside list-decimal">
@@ -223,6 +226,7 @@
             >
               Salin
             </button>
+              <button onclick="showPopuRisikoJatuh('Nyeri Akut (D.0077) b/d Agen pencedera fisik (Prosedur Operasi)');" class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"> Detail </button>
           </td>
           <td class="border border-gray-300 p-2">Pasien menunjukkan penurunan (Tingkat Jatuh L.14138):
             <ul class="list-decimal list-inside">
@@ -258,7 +262,7 @@
     <!-- Detail Diagnosa  ansietas -->
     <div class="overlay" onclick="hidePopup()"></div>
     <div class="popup" id="popup">
-      <h2 class="text-xl font-semibold mb-3">Detail Ansietas (D. 0080) b/d Kekhawatiiran mengalami kegagalan</h2>
+      <h2 class="text-xl font-semibold mb-3">Ansietas (D. 0080) b/d Kekhawatiiran mengalami kegagalan</h2>
       <p class="leading-tight">
         <Span class="font-bold">Ansietas</Span> <br />
         <span class="text-sm leading-4">Kategori:Psikologis</span> <br />
@@ -300,15 +304,9 @@
           <li>Kolitis ulseratif</li>
         </ul>
       </p>  
-      <button onclick="hidePopup()"
-      class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"
-     id="close-button" > Tutup </button>
-    <!-- copy -->
-      <button
-        onclick="copyToClipboard('Ansietas (D. 0080) b/d Kekhawatiran mengalami kegagalan');"
-        class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"
-      > Salin </button>
-    </div>
+      <button onclick="hidePopup()" class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"
+     id="close-button-popup"> Tutup </button>
+     </div>
     <!-- end detail asietas -->
 
       <!-- Detail Risiko Hipotermia -->
@@ -316,7 +314,7 @@
       <div class="popup" id="risiko-hipotermia-popup">
         <h2 class="text-xl font-semibold mb-3">Risiko Hipotermia Perioperatif (D.0141) b/d Kombinasi anastesi regional dan umum</h2>
         <p class="leading-tight">
-          <Span class="font-bold">RISIKO HIPOTERMIA PERIOPERATIF D.0141</Span> <br />
+          <Span class="font-bold">Risiko Hipotermia Perioperatif (D.0141) </Span> <br />
           <span class="text-sm leading-4">Kategori:Lingkungan</span> <br />
           <span class="text-sm leading-4">Subkategori : Keamanan dan Proteksi</span> <br />
           <span class="font-semibold "> Definisi :</span> <br />
@@ -358,12 +356,160 @@
         <button
         onclick="hidePopupRisikoHipotermia()"
         class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"
-       id="close-button" >
+       id="close-button-hipotermia" >
         Tutup
       </button>
+      </div>
      <!-- End detail resiko hipotermai -->
+    <!-- Detail Risiko perdarahan -->
+         <div class="overlay"></div>
+         <div class="popup" id="risiko-perdarahan-popup">
+           <h2 class="text-xl font-semibold mb-3"> Risiko Perdarahan (D.0012) b/d Tindakan Pembedahan </h2>
+           <p class="leading-tight">
+             <Span class="font-bold"> Risiko Perdarahan (D.0012)</Span> <br />
+             <span class="text-sm leading-4">Kategori:Fisiologis</span> <br />
+             <span class="text-sm leading-4">Subkategori : Sirkulasi</span> <br />
+             <span class="font-semibold "> Definisi :</span> <br />
+             <span class="text-sm leading-3">Berisiko mengalami kehingan darah baik internal terjadi didalam tubuh maupun eksternal (terjadi hingga keluar tubuh).</span>
+           </p>
+           <p class="font-semibold">
+             Faktor Risiko:
+             <ul class="list-decimal list-inside text-sm leading-tight">
+               <li>Aneurisma</li>
+               <li>Gangguan gastrointestinal (mis. Ulkus lambung, polip, varises)</li>
+               <li>Gangguan fungsi hati(mis. Sirosis hepatitis)</li>
+               <li>Komplikasi kehamilan (mis. Ketuban pecah sebelum waktunya, plasenta previa/abrupsio, kehamilan kembar)</li>
+               <li>Komplilasi pasca partum (mis. Atoni uterus, retensi plasenta)</li>
+               <li>Gagguan koagulasi (mis. Trombositopenia)</li>
+               <li>Efek agen farmakologis</li>
+               <li>Tindakan pembedahan</li>
+               <li>Trauma</li>
+               <li>Kurang terpapar informasi tentang pencehan perdarahan</li>
+               <li>Proses keganasan</li>
+             </ul>
+            </p>
+           <p class="mt-2 font-semibold">Kondisi terkait </p>
+             <p class="list-decimal list-inside leading-4 text-sm">
+               <ul class="list-decimal list-inside text-sm leading-tight">
+                 <li>Aneurisma </li>
+                 <li> Koagulopati intravaskuler diseminata</li>
+                 <li> Siroris hepatitis </li>
+                 <li> Ulkus lambung</li>
+                 <li>  Varises</li>
+                 <li>  Trombositopenia</li>
+                 <li>  Ketuban pecah sebelum waktunya</li>
+                 <li>  Plasenta previa/abrusio</li>
+                 <li>  Atonia uterus</li>
+                 <li>  Retensi plasenta</li>
+                 <li> Tindakan pembedahan</li>
+                 <li>  Kanker </li>
+                 <li> Trauma </li>
+               </ul>
+           </p>  
+           <button
+           onclick="hidePopupRisikoPerdarahan()"
+           class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"
+          id="close-button-perdarahan" >
+           Tutup
+         </button>
+         </div>
+        <!-- End detail resiko perdarahan -->
 
 
+         <!-- Detail Nyeri Akut -->
+          <div class="overlay"></div>
+         <div class="popup" id="nyeri-akut">
+           <h2 class="text-xl font-semibold mb-3"> Nyeri Akut (D.0077) b/d Agen pencedera fisik </h2>
+           <p class="leading-tight">
+             <Span class="font-bold"> Nyeri Akut (D.0077) </Span> <br />
+             <span class="text-sm leading-4">Kategori: Psikologis</span> <br />
+             <span class="text-sm leading-4">Subkategori : Nyeri dan Kenyamanan</span> <br />
+             <span class="font-semibold "> Definisi :</span> <br />
+             <span class="text-sm leading-3">Pengalaman sensorik atau emosional yang berkatian dengan kerusakan jaringan aktual atau fungsional, dengan onset mendadak atau lambat dan berintesitas ringan hingga berat yang berlangsung kurang dari 3 bulan.</span>
+           </p>
+           <p class="font-semibold">
+             Faktor Risiko:
+             <ul class="list-decimal list-inside text-sm leading-tight">
+               <li> Agen pencedera fisiologis (mis. Inflamasi, iskemia, neoplasma)</li>
+               <li> Agen pencedera kimiawi(mis. Terbakar, bahan kimia iritan)</li>
+               <li> Agen pencedera fisik( mis. Abses, amputasi, terbakar, terpotong, mengangkat berat, prosedur operasi, trauma, latihan fisik berlebihan) </li>
+             </ul>
+            </p>
+            <!-- table -->
+            <table>
+             
+                <h1 class="text-sm font-bold  mt-2 ">Gelaja dan Tanda Mayor</h1>
+                <thead>
+                  <tr class="">
+                    <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
+                      Subjektif
+                    </th>
+                    <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
+                      Objektif
+                    </th>
+                  </tr>
+                  <td class="text-sm font-semibold mt-2 border bg-gray-100">Mengeluh Nyeri*</td>
+                  <td class="text-sm font-semibold mt-2 border bg-gray-100">
+                    <ul class="list-decimal list-inside leading-normal ml-3">
+                    <li> Tampak meringis </li>
+                    <li> Bersikap protektif ( mis. Waspada posisi menghindari nyeri) </li>
+                    <li> Gelisah </li>
+                    <li> Frekuensi nadi meningkat</li>
+                    <li> Sulit tidur</li>
+                    </ul>
+                  </td>
+                 <hr class="">
+                </thead>
+              </table>
+                <hr class="mb-4">
+              <table>
+               <hr class="mb-4">
+                <h1 class="text-sm font-bold  mt-2 ">Gelaja dan Tanda Minor</h1>
+                <thead>
+                  <tr class="">
+                    <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
+                      Subjektif
+                    </th>
+                    <th class="border border-gry-200 bg-sky-100 p-1 w-2/5 shadow-md md:w-auto md:text-sm md:leading-10">
+                      Objektif
+                    </th>
+                  </tr>
+                  <td class="text-sm font-semibold mt-2 border bg-gray-100">(tidak tersedia)</td>
+                  <td class="text-sm font-semibold mt-2 border bg-gray-100">
+                    <ul class="list-decimal list-inside leading-normal ml-3">
+                   <li> Tekanan darah meningkat</li>
+                   <li> Pola napas berubah</li>
+                   <li> Nafsu makan berubah</li>
+                   <li> Proses berpikir terganggu </li>
+                   <li> Menarik diri dan Berfokus pada diri sendiri</li>
+                   <li> Diafoesis</li>
+                    </ul>
+                  </td>
+                </thead>
+              </table>
+              <hr class="mb-2">
+            <!-- endtable -->
+            <p class="mt-2 font-semibold">Kondisi terkait </p>
+             <p class="list-decimal list-inside leading-4 text-sm">
+               <ul class="list-decimal list-inside text-sm leading-tight">
+               <li> Kondisi Pembedahan</li>
+               <li> Cedera traumatis </li>
+               <li> Infeksi</li>
+               <li> Sindrom koroner akut</li>
+               <li> Glaukoma</li>
+            </ul>
+           </p>  
+           <button
+           onclick="hidePopupNyeriAkut()"
+           class="bg-blue-500 text-white font-serif py-1 px-2 hover:bg-green-500 rounded hover:rounded-full hover:duration-500 ml-2 mt-1 shadow-md"
+          id="close-button" >
+           Tutup
+         </button>
+         </div>
+        <!-- End Detail Nyeri Akut -->
+
+       
+   
     <script>
       // Salin teks ke clipboard
       function copyToClipboard(text) {
@@ -383,14 +529,23 @@
         const detailText = document.querySelector('.popup p.leading-tight');
         detailText.innerHTML = text;
         popup.style.display = 'block';
-        overlay.style.display = 'block';
+        overlay.style.display = 'none';
       }
       function showPopupRisikoHipotermia() {
-        var popup = document.getElementById('risiko-hiptermia-popup');
+        var popup = document.getElementById('risiko-hipotermia-popup');
+        popup.style.display = 'block';
+      }
+      function showPopupRisikoPerdarahan() {
+        var popup = document.getElementById('risiko-perdarahan-popup');
         popup.style.display = 'block';
       }
       
-
+      function showPopupNyeriAkut() {
+        var popup = document.getElementById('nyeri-akut');
+        popup.style.display = 'block';
+      }
+      
+      
       // Menyembunyikan popup detail
       function hidePopup() {
         const popup = document.getElementById('popup');
@@ -398,8 +553,16 @@
         popup.style.display = 'none';
         overlay.style.display = 'none';
       }
-      function hidePopupRisikoHiptermia(){
+      function hidePopupRisikoHipotermia(){
         var popup = document.getElementById('risiko-hipotermia-popup');
+        popup.style.display = 'none';
+      }
+      function hidePopupRisikoPerdarahan(){
+        var popup = document.getElementById('risiko-perdarahan-popup');
+        popup.style.display = 'none';
+      }
+      function hidePopupNyeriAkut(){
+        var popup = document.getElementById('nyeri-akut');
         popup.style.display = 'none';
       }
 
