@@ -5,11 +5,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div class="container mx-auto py-8">
+    <div class="container mx-auto p-8">
       <h2 class="text-2xl font-bold mb-4">Tabel Kamar Bedah</h2>
-      <form id="myForm" class="mb-4 flex flex-wrap">
-        <div class="flex items-center space-x-2 w-full md:w-1/2">
-          <select class="form-select rounded-md border-gray-300" id="kamarBedah">
+      <form id="myForm" class="mb-4">
+        <div class="grid grid-cols-2 gap-4 md:w-1/2">
+          <select class="form-select border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500" id="kamarBedah">
             <option value="">Pilih Kamar Bedah</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -17,30 +17,30 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <select class="form-select rounded-md border-gray-300" id="jaminan">
+          <select class="form-select border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500" id="jaminan">
             <option value="">Pilih Jaminan</option>
             <option value="JKN">JKN</option>
             <option value="Asr">Asr</option>
             <option value="Umum">Umum</option>
           </select>
-          <select class="form-select rounded-md border-gray-300" id="anes">
+          <select class="form-select border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500" id="anes">
             <option value="">Pilih Anes</option>
             <option value="LMA">LMA</option>
             <option value="GA">GA</option>
             <option value="LOKAL">LOKAL</option>
           </select>
-        </div>
-        <div class="flex items-center space-x-2 w-full md:w-1/2">
-          <input type="text" class="form-input rounded-md border-gray-300 flex-1" placeholder="Waktu" id="waktu" />
-          <input type="text" class="form-input rounded-md border-gray-300 flex-1" placeholder="Tindakan Operasi" id="tindakanOperasi" />
-          <input type="text" class="form-input rounded-md border-gray-300 flex-1" placeholder="Operator" id="operator" />
-          <input type="text" class="form-input rounded-md border-gray-300 flex-1" placeholder="Perawat" id="perawat" />
-          <input type="text" class="form-input rounded-md border-gray-300 flex-1" placeholder="Keterangan" id="keterangan" />
-          <button type="button" class="btn btn-primary" onclick="tambahkanData()">Tambahkan</button>
+        <!-- </div>
+        <div class="grid grid-cols-2 gap-4  md:w-1/2"> -->
+          <input type="time" class="form-input border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:order-blue-500" placeholder="Waktu" id="waktu" />
+          <input type="text" class="form-input border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:order-blue-500" placeholder="Tindakan Operasi" id="tindakanOperasi" />
+          <input type="text" class="form-input border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:order-blue-500" placeholder="Operator" id="operator" />
+          <input type="text" class="form-input border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:order-blue-500" placeholder="Perawat" id="perawat" />
+          <input type="text" class="form-input border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:order-blue-500" placeholder="Keterangan" id="keterangan" />
+          <button type="button" class="btn mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600" onclick="tambahkanData()">Tambahkan</button>
         </div>
       </form>
 
-      <table class="table-auto w-full" id="myTable">
+      <table class="table w-full" id="myTable">
         <thead>
           <tr>
             <th class="px-1 bg-indigo-400 py-1">Kamar</th>
